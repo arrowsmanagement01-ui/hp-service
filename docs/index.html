@@ -504,6 +504,43 @@
       .thanks h3{ margin:0 0 10px; font-size:1.4rem; font-weight:900; }
       .thanks p{ margin:0; color:var(--muted); }
 
+      /* ---------- LINE ---------- */
+      .line-block{
+        background:var(--panel); border:2px solid #06C755; border-radius:18px;
+        padding:26px 28px; margin-bottom:20px;
+        display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+      }
+      .line-block .line-text{ flex:1 1 320px; min-width:0; }
+      .line-block h3{
+        margin:0 0 6px; font-size:1.2rem; font-weight:900; line-height:1.5;
+        display:flex; align-items:center; gap:10px;
+      }
+      .line-block h3 .line-badge{
+        display:inline-flex; align-items:center; justify-content:center;
+        background:#06C755; color:#fff; font-weight:900; font-size:.78rem;
+        letter-spacing:.06em; padding:3px 12px; border-radius:999px; white-space:nowrap;
+      }
+      .line-block p{ margin:0; color:var(--muted); font-size:.97rem; }
+      .btn-line{
+        display:inline-flex; align-items:center; justify-content:center; gap:.55em;
+        background:#06C755; color:#fff; text-decoration:none;
+        font-weight:900; font-size:1.08rem; padding:15px 30px; border-radius:10px;
+        min-height:3.5rem; white-space:nowrap;
+        box-shadow:0 6px 0 #048c3c; transition:transform .08s ease, box-shadow .08s ease;
+      }
+      .btn-line:active{ transform:translateY(4px); box-shadow:0 2px 0 #048c3c; }
+      .btn-line svg{ width:24px; height:24px; flex:none; }
+      .line-float{
+        position:fixed; right:18px; bottom:18px; z-index:60;
+        display:inline-flex; align-items:center; justify-content:center; gap:.55em;
+        background:#06C755; color:#fff; text-decoration:none;
+        font-weight:900; font-size:1.05rem; line-height:1.3;
+        padding:14px 24px; min-height:3.6rem; border-radius:999px;
+        box-shadow:0 8px 22px rgba(0,0,0,.5), 0 4px 0 #048c3c;
+      }
+      .line-float svg{ width:26px; height:26px; flex:none; }
+      .line-float:active{ transform:translateY(2px); }
+
       /* ---------- FOOTER ---------- */
       footer{
         border-top:1px solid var(--line); padding:36px 0 44px; background:#070708;
@@ -543,7 +580,13 @@
         .form-2col{ grid-template-columns:1fr; }
         .form-card{ padding:26px 20px; }
         .sticky-cta{ display:block; }
-        body{ padding-bottom:76px; }
+        body{ padding-bottom:158px; }
+        .line-block{ padding:22px 20px; gap:16px; }
+        .line-block .btn-line{ width:100%; }
+        .line-float{
+          right:14px; bottom:calc(76px + env(safe-area-inset-bottom));
+          font-size:1.1rem; min-height:3.8rem; padding:15px 26px;
+        }
       }
       @media (max-width:420px){
         .steps{ grid-template-columns:1fr; }
@@ -951,6 +994,16 @@
           <h2>まずは<span class="hl">無料相談</span>から</h2>
           <p><span class="ph">「何から聞けばいいか</span><span class="ph">わからない」という段階でも</span><span class="ph">大丈夫です。</span><span class="ph">全国どこからでも</span><span class="ph">ご相談いただけます。</span><span class="ph">送信いただいた内容は、</span><span class="ph">担当者よりメールで</span><span class="ph">ご返信いたします。</span></p>
         </div>
+        <div class="line-block">
+          <div class="line-text">
+            <h3><span class="line-badge">LINE</span>LINEでもご相談いただけます</h3>
+            <p><span class="ph">LINEでもご相談いただけます。</span><span class="ph">ご依頼後のホームページ作成時の</span><span class="ph">やり取りもLINEでできます。</span></p>
+          </div>
+          <a class="btn-line" href="https://lin.ee/sS5XQn3" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            LINEで相談する
+          </a>
+        </div>
         <div class="form-card">
           <form id="contactForm" action="https://hp-contact-api.arrowsmanagement01.workers.dev/api/hp-contact" method="POST" target="_blank">
             <input type="text" name="_honey" id="honeyField" style="display:none" tabindex="-1" autocomplete="off" />
@@ -1026,6 +1079,11 @@
         <p><span class="ph">富山・石川を拠点に、</span><span class="ph">全国のお店・会社の</span><span class="ph">ホームページ制作を</span><span class="ph">行っています。</span></p>
       </div>
     </footer>
+
+    <a class="line-float" href="https://lin.ee/sS5XQn3" target="_blank" rel="noopener" aria-label="LINEで無料相談（友だち追加）">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      LINEで無料相談
+    </a>
 
     <div class="sticky-cta">
       <a href="#contact">無料で相談する</a>
