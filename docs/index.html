@@ -312,6 +312,56 @@
       .btn-cta:active{ transform:translateY(4px); box-shadow:0 2px 0 #a88700; }
       .cta-note{ color:var(--muted); font-size:.92rem; }
 
+      /* ---------- AI ERA ALERT ---------- */
+      .ai-era{
+        background:
+          radial-gradient(70% 60% at 90% 0%, rgba(230,0,18,.28), transparent 60%),
+          linear-gradient(180deg, #141018 0%, #0a0a0c 100%);
+        border-bottom:8px solid var(--yellow);
+        padding:64px 0 60px;
+        overflow:hidden;
+        position:relative;
+      }
+      .ai-era::before{
+        content:"AI SEARCH"; position:absolute; right:-1rem; top:.4rem;
+        font-weight:900; font-size:clamp(3.4rem, 11vw, 7.5rem); line-height:1; letter-spacing:.04em;
+        color:transparent; -webkit-text-stroke:2px rgba(255,212,0,.13);
+        pointer-events:none; user-select:none; white-space:nowrap;
+      }
+      .ai-era-inner{ position:relative; z-index:1; }
+      .ai-era-tag{
+        display:inline-block; background:var(--yellow); color:#0a0a0c;
+        font-weight:900; font-size:.88rem; letter-spacing:.1em;
+        padding:6px 14px; transform:skewX(-8deg); margin-bottom:22px;
+        box-shadow:5px 5px 0 rgba(230,0,18,.7);
+      }
+      .ai-era-tag span{ display:inline-block; transform:skewX(8deg); }
+      .ai-era-lines{ margin:0 0 26px; }
+      .ai-era-lines .line{
+        display:block; font-weight:900; line-height:1.28; letter-spacing:.01em;
+        font-size:clamp(1.65rem, 5.8vw, 3.1rem); margin:0 0 .18em;
+      }
+      .ai-era-lines .line.small{
+        font-size:clamp(1.25rem, 4.4vw, 2.1rem); color:var(--muted);
+      }
+      .ai-era-lines .rd{ color:var(--red); text-shadow:.04em .04em 0 rgba(255,212,0,.85); }
+      .ai-era-lines .hl{ color:#0a0a0c; background:var(--yellow); padding:0 .16em; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+      .ai-era-lines .yl{ color:var(--yellow); }
+      .ai-era-sub{
+        color:var(--muted); font-size:1.02rem; max-width:44em; margin:0 0 28px;
+        text-align:justify; text-justify:inter-ideograph; line-break:strict; word-break:auto-phrase;
+      }
+      .ai-era-sub strong{ color:var(--text); }
+      .ai-era-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-bottom:30px; }
+      .ai-era-point{
+        background:rgba(23,23,28,.92); border:1px solid var(--line); border-top:5px solid var(--red);
+        border-radius:var(--radius); padding:20px 20px 16px;
+      }
+      .ai-era-point .no{ display:block; font-weight:900; color:var(--yellow); font-size:.82rem; letter-spacing:.14em; margin-bottom:6px; }
+      .ai-era-point h3{ margin:0 0 6px; font-size:1.08rem; font-weight:900; line-height:1.45; }
+      .ai-era-point p{ margin:0; color:var(--muted); font-size:.93rem; line-height:1.8; }
+      .ai-era-point p strong{ color:var(--text); }
+
       /* ---------- STRENGTHS ---------- */
       .strengths{ background:var(--bg2); }
       .grid4{ display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; }
@@ -685,6 +735,8 @@
         section{ padding:54px 0; }
         .price-duo{ grid-template-columns:1fr; }
         .grid4{ grid-template-columns:1fr; }
+        .ai-era-grid{ grid-template-columns:1fr; }
+        .ai-era{ padding:52px 0 48px; }
         .vs-grid{ grid-template-columns:1fr; }
         .reason-grid{ grid-template-columns:1fr; }
         .do-list{ grid-template-columns:1fr; }
@@ -720,7 +772,7 @@
 
     <!-- ============ TICKER ============ -->
     <div class="ticker" aria-hidden="true">
-      <div class="ticker-track" id="tickerTrack">衝撃価格<span class="sep">◆</span>DEEP IMPACT<span class="sep">◆</span>一括 89,800円<span class="sep">◆</span>サブスク 月々4,980円<span class="sep">◆</span>全国対応<span class="sep">◆</span>自動SEO対策・AI検索対応<span class="sep">◆</span></div>
+      <div class="ticker-track" id="tickerTrack">検索はAIに聞く時代へ<span class="sep">◆</span>AIに選ばれるホームページを<span class="sep">◆</span>衝撃価格<span class="sep">◆</span>DEEP IMPACT<span class="sep">◆</span>一括 89,800円<span class="sep">◆</span>サブスク 月々4,980円<span class="sep">◆</span>全国対応<span class="sep">◆</span>自動SEO対策・AI検索対応<span class="sep">◆</span></div>
     </div>
 
     <!-- ============ HERO ============ -->
@@ -755,6 +807,41 @@
         </div>
       </div>
     </header>
+
+    <!-- ============ AI ERA ALERT ============ -->
+    <section class="ai-era" id="ai-era" aria-label="AI検索時代の訴求">
+      <div class="wrap ai-era-inner">
+        <p class="ai-era-tag"><span>今、検索が変わった</span></p>
+        <h2 class="ai-era-lines">
+          <span class="line">検索は、<span class="rd">AIに聞く</span>時代へ。</span>
+          <span class="line small">Google・Yahoo!で探すだけの時代は、終わりつつある。</span>
+          <span class="line">AIに選ばれなければ、<br /><span class="hl">誰にも見つけてもらえない。</span></span>
+          <span class="line">真っ先に変えるべきは、<span class="yl">ホームページ。</span></span>
+        </h2>
+        <p class="ai-era-sub"><span class="ph">お客様はもう、</span><span class="ph">リンクの一覧を</span><span class="ph">1件ずつ比べていません。</span><span class="ph">ChatGPTやAI回答に聞いて、</span><strong><span class="ph">AIが名前を挙げた</span><span class="ph">数件の中から選ぶ</span></strong><span class="ph">時代です。</span><span class="ph">だからこそ、</span><strong><span class="ph">AIに読まれ、</span><span class="ph">正しく理解され、</span><span class="ph">選ばれるホームページ</span></strong><span class="ph">へ変えることが、</span><span class="ph">集客の第一歩になります。</span></p>
+        <div class="ai-era-grid">
+          <div class="ai-era-point">
+            <span class="no">POINT 01</span>
+            <h3>探し方が、変わった</h3>
+            <p>キーワード検索から、<strong>「おすすめは？」とAIに聞く</strong>探し方へ。お客様の入口が移動しています。</p>
+          </div>
+          <div class="ai-era-point">
+            <span class="no">POINT 02</span>
+            <h3>選ばれる枠は、少ない</h3>
+            <p>AIの回答で名前が挙がるのは<strong>ごく少数</strong>。載っているだけでは、選ばれません。</p>
+          </div>
+          <div class="ai-era-point">
+            <span class="no">POINT 03</span>
+            <h3>備えた会社が、強くなる</h3>
+            <p><strong>AI検索対応のホームページ</strong>を備えることが、そのまま集客力アップにつながります。</p>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn-cta" href="#ai-search">なぜ必要なのか、詳しく見る</a>
+          <p class="cta-note">当社の制作は、AI検索対応を<br />標準で組み込んでいます。</p>
+        </div>
+      </div>
+    </section>
 
     <!-- ============ STRENGTHS ============ -->
     <section class="strengths" id="strengths">
